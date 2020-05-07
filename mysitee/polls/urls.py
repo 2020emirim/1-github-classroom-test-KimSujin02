@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+app_name = 'polls'
 urlpatterns = [
     # 127.0.0.1:8000/polls/
     path('', views.index, name='index'),
@@ -12,3 +13,4 @@ urlpatterns = [
     # 127.0.0.1:8000/polls/5/vote/
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
+
